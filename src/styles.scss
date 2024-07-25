@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+// body.toggle-sidebar .sidebar {
+//     display: none; /* Adjust as needed */
+//   }
+
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f6f9ff;
+  color: #444444;
+}
+
+
+a {
+    color: #41abf1;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #717ff5;
+    text-decoration: none;
+  }
