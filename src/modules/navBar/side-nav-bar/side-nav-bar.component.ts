@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './side-nav-bar.component.scss'
 })
 export class SideNavBarComponent {
+  collapsed:boolean=false;
 
 }
