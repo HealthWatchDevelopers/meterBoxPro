@@ -1,1 +1,120 @@
-<p>side-nav-bar works!</p>
+@if(true){
+    <aside id="sidebar" class="sidebar"  [ngClass]="collapsed ? 'sidenav-collapsed':''">
+    
+      <ul class="sidebar-nav" id="sidebar-nav">
+    
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/lms/Admin/Home">
+            <!-- <i class="bi bi-grid"></i> -->
+            <i class="bi bi-cake" ></i>
+            <br>
+            @if (collapsed) {
+            <span>Dashboard</span>
+            }
+          </a>
+        </li><!-- End Dashboard Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#userregisteration-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i>
+            @if(collapsed)
+            {
+            <span>User Registeration</span><i class="bi bi-chevron-down ms-auto"></i>
+            }
+          </a>
+          <ul id="userregisteration-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a routerLink="/lms/Admin/UserRegister/Register">
+                <i class="bi bi-circle"></i><span>Registeration</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li><!-- End userregisteration Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#batchs-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-journal-text"></i>
+            @if(collapsed)
+            {
+            <span>Batchs</span><i class="bi bi-chevron-down ms-auto"></i>
+            }
+          </a>
+          <ul id="batchs-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a routerLink="/lms/Admin/Batchs">
+                <i class="bi bi-circle"></i><span>All Batchs</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/lms/Admin/Batchs/Student-Details">
+                <i class="bi bi-circle"></i><span>Student Details</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/lms/Admin/Batchs/Test-Details">
+                <i class="bi bi-circle"></i><span>Test</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/lms/Admin/Batchs/Results">
+                <i class="bi bi-circle"></i><span>Results</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/lms/Admin/Batchs/Performance">
+                <i class="bi bi-circle"></i><span>Performance</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End batchs Nav -->
+    
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-layout-text-window-reverse"></i>
+            @if(collapsed)
+            {
+            <span>Test</span><i class="bi bi-chevron-down ms-auto"></i>
+            }
+          </a>
+          <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a routerLink="/lms/Admin/Test/Question-Paper">
+                <i class="bi bi-circle"></i><span>Question Paper</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/lms/Admin/Test/Question-Bank">
+                <i class="bi bi-circle"></i><span>Question Bank</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Tables Nav -->
+    
+    
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/lms/Admin/Course">
+            <i class="bi bi-bar-chart"></i>
+            @if (collapsed) {
+            <span>Course</span>
+            }
+          </a>
+        </li><!-- End Dashboard Nav -->   
+    
+       
+    
+    
+      </ul>
+    
+    </aside>
+    }
+    
+    
+    <!-- <div class="container-fluid vh-100">
+        <div class="row">
+            <div class="col-12 text-center">
+                <button (click)="changeTheme()" class="btn btn-danger">{{ mode }}</button>
+            </div>
+        </div>
+    </div> -->

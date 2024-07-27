@@ -28,7 +28,7 @@ body{
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #f6f9ff;
+  background: #ffffff;
   color: #444444;
 }
 
@@ -39,6 +39,43 @@ a {
   }
   
   a:hover {
-    color: #717ff5;
     text-decoration: none;
+    color: #318CE7;
+    cursor: pointer;
   }
+
+
+  /*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+  margin-top: 5rem;
+  padding: 20px 30px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px;
+  }
+}
+
+ 
+@media (min-width: 1200px) {
+
+  .toggle-sidebar #main,
+  .toggle-sidebar #footer {
+    margin-left:  5rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  
+  #main,
+  #footer {
+    margin-left: 5rem;
+    background-color: #FAFAFA;
+
+  }
+}
