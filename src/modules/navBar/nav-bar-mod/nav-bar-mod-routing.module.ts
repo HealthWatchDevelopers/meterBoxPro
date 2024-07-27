@@ -5,13 +5,12 @@ import { DashboardComponent } from '../../components/dashboard/dashboard/dashboa
 
 const routes: Routes = [
   {
-    path:'',
+    path:'',   
     component:FullScreenComponent,
     children:[
       {
         path:'',
-        component:DashboardComponent
-        
+        component:DashboardComponent        
       },
       {
         path:'Profile',
