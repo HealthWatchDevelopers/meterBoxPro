@@ -6,6 +6,8 @@ import { HeaderNavBarComponent } from '../header-nav-bar/header-nav-bar.componen
 import { FullScreenComponent } from '../full-screen/full-screen.component';
 import { SideNavBarComponent } from '../side-nav-bar/side-nav-bar.component';
 import { BodyComponent } from '../body/body.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { DashboardComponent } from '../../components/dashboard/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { BodyComponent } from '../body/body.component';
     HeaderNavBarComponent,
     FullScreenComponent,
     SideNavBarComponent,
-    BodyComponent
+    BodyComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
-    NavBarModRoutingModule
+    NavBarModRoutingModule,
+    NgxEchartsModule.forRoot({ echarts: () => import('echarts') })
   ]
 })
 export class NavBarModModule { }

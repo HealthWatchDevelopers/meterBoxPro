@@ -10,7 +10,9 @@ const routes: Routes = [
     children:[
       {
         path:'',
-        component:DashboardComponent        
+        component: DashboardComponent,    
+        // loadChildren:()=>
+        //   import('../../components/dashboard/dashboard-mod/dashboard-mod.module').then((x)=>x.DashboardModModule)
       },
       {
         path:'Profile',
