@@ -8,6 +8,7 @@ import { SideNavBarComponent } from '../side-nav-bar/side-nav-bar.component';
 import { BodyComponent } from '../body/body.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { DashboardComponent } from '../../components/dashboard/dashboard/dashboard.component';
+import { BirthdayComponent } from '../../components/birthday/birthday/birthday.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DashboardComponent } from '../../components/dashboard/dashboard/dashboa
     FullScreenComponent,
     SideNavBarComponent,
     BodyComponent,
-    DashboardComponent
+    DashboardComponent,
+    BirthdayComponent
   ],
   imports: [
     CommonModule,

@@ -83,8 +83,8 @@
                                     <div class="row">
                                         <div class="col-6 text-center">Today’s target</div>
                                         <div class="col-6 text-center">Today’s achieved</div>
-                                        <div class="col-6 mt-2 text-center" style="font-size: 30px;">30</div>
-                                        <div class="col-6 mt-2 text-center" style="font-size: 30px; color: #F85050;">
+                                        <div class="col-6 mt-2 text-center" style="font-size: 23px;">30</div>
+                                        <div class="col-6 mt-2 text-center" style="font-size: 23px;margin-bottom: -21px; color: #F85050;">
                                             00
                                             <br>
                                             <span style="color:#318CE7;font-size: 11.5px;">Update</span>
@@ -107,116 +107,100 @@
                 </div>
 
                 <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-4 mt-2">
+                <div class="col-xxl-4 col-md-4 col-sm-12 mt-2">
                     <div class="card info-card sales-card">
 
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h5 class="card-title">Attendance</h5>
+                                </div>
+                                <div class="col-5">
+                                    <select class="form-select" aria-label="select example">
+                                        <option value="1">Today</option>
+                                        <option selected value="2">This Week</option>
+                                        <option value="3">This Month</option>
+                                        <option value="4">This Year</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">Jun 2024</div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center">
 
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
+                                        <div id="attendanceChart" style="height: 400px; width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
+                    </div>
+                </div><!-- End Sales Card -->
+
+
+                <!-- Sales Card -->
+                <div class="col-xxl-4 col-md-4 col-sm-12 mt-2">
+                    <div class="card info-card sales-card">
+
                         <div class="card-body">
-                            <h5 class="card-title">Sales <span>| Today</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <!-- <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-cart"></i>
+                            <div class="row">
+                                <div class="col-7">
+                                    <h5 class="card-title">Productivity</h5>
                                 </div>
-                                <div class="ps-3">
-                                    <h6>145</h6>
-                                    <span class="text-success small pt-1 fw-bold">12%</span> <span
-                                        class="text-muted small pt-2 ps-1">increase</span>
+                                <div class="col-5">
+                                    <select class="form-select" aria-label="select example">
+                                        <option value="1">Today</option>
+                                        <option selected value="2">This Week</option>
+                                        <option value="3">This Month</option>
+                                        <option value="4">This Year</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">Mar to Jun 2024</div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center">
 
-                                </div> -->
-                              
-                                <!-- <echarts [options]="eChartOptions" style="height: 400px; width: 100%;"></echarts> -->
-                                <!-- <div id="mainchart" style="height: 400px; width: 100%;"></div> -->
-
+                                        <div id="productionChart" style="height: 400px; width: 100%;"></div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
                 </div><!-- End Sales Card -->
 
                 <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-4  mt-2">
+                <div class="col-xxl-4 col-md-4 col-sm-12 mt-2">
                     <div class="card info-card sales-card">
 
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
-
                         <div class="card-body">
-                            <h5 class="card-title">Sales <span>| Today</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-cart"></i>
+                            <div class="row">
+                                <div class="col-7">
+                                    <h5 class="card-title">Quality</h5>
                                 </div>
-                                <div class="ps-3">
-                                    <h6>145</h6>
-                                    <span class="text-success small pt-1 fw-bold">12%</span> <span
-                                        class="text-muted small pt-2 ps-1">increase</span>
+                                <div class="col-5">
+                                    <select class="form-select" aria-label="select example">
+                                        <option value="1">Today</option>
+                                        <option selected value="2">This Week</option>
+                                        <option value="3">This Month</option>
+                                        <option value="4">This Year</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">Jun 2024</div>
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center">
 
+                                        <div id="qualityChart" style="height: 400px; width: 100%;"></div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
                 </div><!-- End Sales Card -->
 
-                <!-- Revenue Card -->
-                <div class="col-xxl-4 col-md-4  mt-2">
-                    <div class="card info-card revenue-card">
 
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title">Revenue <span>| This Month</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-currency-dollar"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6>$3,264</h6>
-                                    <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                        class="text-muted small pt-2 ps-1">increase</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div><!-- End Revenue Card -->
 
 
             </div>
