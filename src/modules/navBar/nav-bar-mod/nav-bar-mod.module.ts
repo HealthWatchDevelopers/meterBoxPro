@@ -9,6 +9,8 @@ import { BodyComponent } from '../body/body.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { DashboardComponent } from '../../components/dashboard/dashboard/dashboard.component';
 import { BirthdayComponent } from '../../components/birthday/birthday/birthday.component';
+import { CalendarModule } from 'primeng/calendar';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +25,9 @@ import { BirthdayComponent } from '../../components/birthday/birthday/birthday.c
   imports: [
     CommonModule,
     NavBarModRoutingModule,
+    FormsModule,
+
+    CalendarModule,
     NgxEchartsModule.forRoot({ echarts: () => import('echarts') })
   ]
 })

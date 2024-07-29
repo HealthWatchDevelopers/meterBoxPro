@@ -7,11 +7,10 @@
 
                     <h3>Birthdays</h3>
                 </div>
-                <div class="col-2">
-                    <p class="text-end">
-                        Current time<br>
-                        12:10 PM
-                    </p>
+                <div class="col-2 mt-1 text-center">
+                    <p><a class="link-underline link-underline-opacity-0" href="#">
+                            <i class="bi bi-chevron-left"></i>Back</a></p>
+
                 </div>
             </div>
             <!-- <nav>
@@ -21,6 +20,32 @@
           </ol>
         </nav> -->
         </div><!-- End Page Title -->
+
+        <section class="section Birthdays">
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <ul class="nav justify-content-start">
+                        @for (item of datetypes; track $index) {
+                        <li class="nav-item">
+                            <button type="button" (click)="navigateDate(item.value)"
+                                [ngClass]="item.active?'btn btn-primary':'btn btn-secondary'">{{item.label}}</button>
+                            @if (item.label == 'Date Range' && item.active) {
+                            <div class="mt-4" (click)="onChange()">
+                                <p-calendar class="max-w-full" [(ngModel)]="rangeDates" selectionMode="range"
+                                    [inline]="true" [showWeek]="true" />
+                            </div>
+                            }
+                        </li>
+                        }
+                        <li class="nav-item">
+                            <span>{{fromtodatereturn()}}</span>
+                            <!-- <button type="button" (click)="showFilter()" [ngClass]="showFilter?'btn btn-primary':'btn btn-secondary'">Filter</button> -->
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
 
     </div>
 </div>

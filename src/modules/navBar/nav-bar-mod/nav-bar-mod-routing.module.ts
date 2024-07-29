@@ -6,33 +6,33 @@ import { BirthdayComponent } from '../../components/birthday/birthday/birthday.c
 
 const routes: Routes = [
   {
-    path:'',   
-    component:FullScreenComponent,
-    children:[
+    path: '',
+    component: FullScreenComponent,
+    children: [
       {
-        path:'',
-        component: DashboardComponent,    
+        path: '',
+        component: DashboardComponent,
         // loadChildren:()=>
         //   import('../../components/dashboard/dashboard-mod/dashboard-mod.module').then((x)=>x.DashboardModModule)
       },
       {
-        path:'Profile',
-        loadComponent:()=>
-        import('../../components/userProfile/user-profile/user-profile.component').then((x)=>x.UserProfileComponent)
+        path: 'Profile',
+        loadComponent: () =>
+          import('../../components/userProfile/user-profile/user-profile.component').then((x) => x.UserProfileComponent)
       },
       {
-path:'ResetPassword',
-loadComponent:()=>
-  import('../../components/userProfile/reset-password/reset-password.component').then((x)=>x.ResetPasswordComponent)
+        path: 'ResetPassword',
+        loadComponent: () =>
+          import('../../components/userProfile/reset-password/reset-password.component').then((x) => x.ResetPasswordComponent)
       },
       {
-        path:'Birthday',
-        component:BirthdayComponent
+        path: 'Birthday',
+        component: BirthdayComponent
       }
     ]
 
   },
-  
+
 
 ];
 
