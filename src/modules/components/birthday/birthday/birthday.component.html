@@ -27,25 +27,192 @@
                     <ul class="nav justify-content-start">
                         @for (item of datetypes; track $index) {
                         <li class="nav-item">
+
+                            @if (item.label != 'Date Range') {
                             <button type="button" (click)="navigateDate(item.value)"
-                                [ngClass]="item.active?'btn btn-primary':'btn btn-secondary'">{{item.label}}</button>
-                            @if (item.label == 'Date Range' && item.active) {
-                            <div class="mt-4" (click)="onChange()">
-                                <p-calendar class="max-w-full" [(ngModel)]="rangeDates" selectionMode="range"
-                                    [inline]="true" [showWeek]="true" />
-                            </div>
+                                [ngClass]="item.active?'btn btn-primary':'btn btn-secondary'">
+                                {{item.label}}
+                            </button>
                             }
+                            @else {
+                            <!-- Button trigger modal -->
+
+
+                            <button type="button" (click)="navigateDate(item.value)"
+                                [ngClass]="item.active?'btn btn-primary':'btn btn-secondary'" data-bs-toggle="modal"
+                                data-bs-target="#basicModal">
+                                {{item.label}}
+                            </button>
+                            }
+
+
                         </li>
                         }
+                        @if(fromtodatereturn() != '')
+                        {
                         <li class="nav-item">
                             <span>{{fromtodatereturn()}}</span>
-                            <!-- <button type="button" (click)="showFilter()" [ngClass]="showFilter?'btn btn-primary':'btn btn-secondary'">Filter</button> -->
+                            <p><a class="link-underline link-underline-opacity-0" (click)="resetfromdate()"> Reset and
+                                    show all</a></p>
+
                         </li>
+
+                        }
                     </ul>
 
                 </div>
+
+                @if (getdatetype != 'DateRange') {
+
+
+                <div class="col-12 mt-3">
+
+                    <swiper-container 
+                    loop="true" 
+                    [effect]="'coverflow'"
+                    [slidesPerView]="3"
+                    [spaceBetween]="50"
+                    (swiper)="onSwiper($event)"
+                    (slideChange)="onSlideChange()"
+
+                    [grabCursor]="true"
+                    
+                    [slidesPerView]="'auto'"
+
+                    [coverflowEffect]="{
+                      rotate: 50,
+                      stretch: 0,
+                      depth: 100,
+                      modifier: 1,
+                      slideShadows: true,
+                      scale: 1
+                    }"
+                    
+                    [pagination]="true"
+                    [navigation]="true"
+                    
+                    class="mySwiper"
+
+                    >
+                        <swiper-slide swiperSlide>Slide 1</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 2</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 3</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 4</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 5</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 6</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 7</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 8</swiper-slide>
+                        <swiper-slide swiperSlide>Slide 9</swiper-slide>
+                      </swiper-container>
+
+                    <!-- <div class="slide hi-slide">
+                        <div class="hi-prev"></div>
+                        <div class="hi-next"></div>
+                        <ul>
+
+                            <li *ngFor="let item of datavalues"><img src="{{item.image}}" alt=""></li>
+
+                            <li><img src="{{imagename}}" alt=""></li>
+                            <li><img src="{{imagename}}" alt=""></li>
+                            <li><img src="{{imagename}}" alt=""></li>
+                            <li><img src="{{imagename}}" alt=""></li>
+                            <li><img src="{{imagename}}" alt=""></li>
+                            <li><img src="{{imagename}}" alt=""></li>
+                        </ul>
+                    </div> -->
+                </div>
+
+                <!-- <div id="seconddesign">
+
+                    <div class="bk-slider">
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            <div class="swiper-slide">Slide 4</div>
+                            <div class="swiper-slide">Slide 5</div>
+                            <div class="swiper-slide">Slide 6</div>
+                          </div>
+                          
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                        
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    
+
+                </div> -->
+
+
+
+                }
+                @else{
+
+                <div class="col-12 daterangedata">
+                    <div class="row">
+                        @for (item of datavalues; track $index) {
+                        <div class="col-3 mt-4">
+                            <div class="card info-card ">
+                                <div class="card-body">
+                                    <span>{{item.dob}}</span>
+                                    <h5 class="card-title">{{item.userName}}</h5>
+                                    <p>{{item.location}}</p>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-12 " [ngClass]="item.sendwishes?'':' white-grad'">
+                                            <img class="module" src="{{item.image}}" alt="Sample Image">
+                                        </div>
+                                    </div>
+
+                                    @if(!item.sendwishes){
+                                    <button type="button" class="btn btn-warning sendwisesh">Send wishes</button>
+                                    }
+                                    <!-- <span style="font-size: 11.5px;">
+                                        Total break allowed: 60 Minutes
+                                    </span> -->
+                                </div>
+
+                            </div>
+
+                        </div>
+                        }
+                    </div>
+
+
+
+
+                </div>
+                }
+
+
             </div>
         </section>
 
     </div>
 </div>
+
+
+<div class="modal fade" id="basicModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <!-- Floating Labels Form -->
+                <div class="row g-3">
+                    <div class="col-md-12" (click)="onChange()">
+                        <!-- <div class="mt-4 pcalander " "> -->
+                        <p-calendar class="max-w-full" [(ngModel)]="rangeDates" selectionMode="range" [inline]="true" />
+
+                        <!-- </div>  -->
+                    </div>
+                    <div class="col-md-12 text-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            class="btn btn-secondary">Close</button>
+                    </div>
+                </div><!-- End floating Labels Form -->
+
+            </div>
+        </div>
+    </div>
+</div><!-- End Basic Modal-->

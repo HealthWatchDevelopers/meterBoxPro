@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { NavBarModRoutingModule } from './nav-bar-mod-routing.module';
 import { HeaderNavBarComponent } from '../header-nav-bar/header-nav-bar.component';
 import { FullScreenComponent } from '../full-screen/full-screen.component';
@@ -26,9 +25,10 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     NavBarModRoutingModule,
     FormsModule,
-
+    
     CalendarModule,
     NgxEchartsModule.forRoot({ echarts: () => import('echarts') })
-  ]
+  ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class NavBarModModule { }
