@@ -33,7 +33,6 @@ export class BirthdayComponent implements OnInit,AfterViewInit  {
   
 
   ngOnInit(): void {
-
    
 
   }
