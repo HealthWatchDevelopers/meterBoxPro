@@ -65,73 +65,70 @@
                 @if (getdatetype != 'DateRange') {
 
 
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-3" id="seconddesign">
 
-                    <swiper-container 
-                    loop="true" 
-                    [effect]="'coverflow'"   
-                    [grabCursor]="true"
-                    [centeredSlides]="true"
-                    [slidesPerView]="'auto'"
-                    [loop]="true" 
 
-                    [pagination]="true"
-                    [navigation]="true"
-                    (slideChange)="onSlideChange()"
 
-                    [slidesPerView]="3"
-                    [spaceBetween]="50"
-                    (swiper)="onSwiper($event)"
+                    <div class="slider">
+
+
+                        @for (items of datavalues; track $index) {
+                        <div class="item">
+                            <h1>{{items.userName}} 1</h1>
+
+                        </div>
+                        }
+
+                        <div class="item">
+                            <h1>Slide 2</h1>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam
+                            repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus
+                            quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit
+                            molestiae officiis!
+                        </div>
+                        <div class="item">
+                            <h1>Slide 3</h1>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam
+                            repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus
+                            quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit
+                            molestiae officiis!
+                        </div>
+
+                        <div class="item">
+                            <h1>Slide 4</h1>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam
+                            repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus
+                            quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit
+                            molestiae officiis!
+                        </div>
+                        <div class="item">
+                            <h1>Slide 5</h1>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam
+                            repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus
+                            quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit
+                            molestiae officiis!
+                        </div>
+                        <div class="item">
+                            <h1>Slide 6</h1>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam
+                            repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus
+                            quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit
+                            molestiae officiis!
+                        </div>
+                        <div class="item">
+                            <h1>Slide 7</h1>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere magni magnam unde ipsam
+                            repudiandae explicabo expedita labore, sequi minus neque beatae voluptatum, quasi accusamus
+                            quia quis voluptas laborum ad! Ab totam doloribus, excepturi possimus rem vel quia fugit
+                            molestiae officiis!
+                        </div>
+                        <button id="next"></button>
+                        <button id="prev"></button>
+                    </div>
+
+                 
                     
-                    [coverflowEffect]="{
-                      rotate: 20,
-                      stretch: 0,
-                      depth: 200,
-                      modifier: 1,
-                      slideShadows: true,
-                      scale: 1
-                    }"
-                    
-                    
-                    class="mySwiper"
-
-                    >
-                        <swiper-slide swiperSlide>Slide 1</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 2</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 3</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 4</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 5</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 6</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 7</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 8</swiper-slide>
-                        <swiper-slide swiperSlide>Slide 9</swiper-slide>
-                      </swiper-container>
-
-                    <!-- <div class="slide hi-slide">
-                        <div class="hi-prev"></div>
-                        <div class="hi-next"></div>
-                        <ul>
-
-                            <li *ngFor="let item of datavalues"><img src="{{item.image}}" alt=""></li>
-
-                            <li><img src="{{imagename}}" alt=""></li>
-                            <li><img src="{{imagename}}" alt=""></li>
-                            <li><img src="{{imagename}}" alt=""></li>
-                            <li><img src="{{imagename}}" alt=""></li>
-                            <li><img src="{{imagename}}" alt=""></li>
-                            <li><img src="{{imagename}}" alt=""></li>
-                        </ul>
-                    </div> -->
                 </div>
-
-                <div id="seconddesign">
-
-                   
-                    
-
-                </div>
-
-
 
                 }
                 @else{

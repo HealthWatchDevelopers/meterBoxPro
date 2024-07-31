@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 declare var $: any;
+// declare function loadShow():any;
 
 @Component({
   selector: 'app-birthday',
@@ -34,7 +35,7 @@ export class BirthdayComponent implements OnInit,AfterViewInit  {
 
   ngOnInit(): void {
    
-
+    // loadShow();
   }
 
   ngAfterViewInit(): void {
@@ -53,7 +54,6 @@ export class BirthdayComponent implements OnInit,AfterViewInit  {
     // });
 
     
-    $('.slide').hiSlide();  
   }
 
   navigateDate(datetype: string) {
@@ -77,12 +77,6 @@ export class BirthdayComponent implements OnInit,AfterViewInit  {
   }
 
   
-  onSwiper([swiper]:any) {
-    console.log(swiper);
-  }
-  onSlideChange() {
-    console.log('slide change');
-  }
 
   onChange() {
     console.log(this.rangeDates);

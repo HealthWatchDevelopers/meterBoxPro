@@ -24,14 +24,17 @@
                 </div>
             </div>
         </div>
-        
-        <div class="row no-gutters shadow-lg" >
 
-            <div class="col-md-6  bg-white p-5 d-flex justify-content-center" style="border-top: 2px solid #FBE2E2;" >
-                <div class="text-center" style="width: 450px;">
+        <div class="row no-gutters shadow-lg">
 
 
+            @if (!resetpassword) {
+            <div class="col-md-6  bg-white p-5 d-flex justify-content-center" style="border-top: 2px solid #FBE2E2;">
+                <div class="text-center mt-3" style="width: 450px;">
+
+                    @if (login) {
                     <p class="pb-3 text-center" style="font-size: 20px;">Log in</p>
+
                     <div class="form-style">
                         <form>
                             <div class="form-group mt-4 pb-3">
@@ -47,13 +50,16 @@
                                     <!-- <input name="" type="checkbox" value="" />
                                         <span class="pl-2 font-weight-bold">Remember Me</span> -->
                                 </div>
-                                <div><a href="#" style="color: #318CE7;text-decoration: none; ">Forget Password?</a></div>
+                                <div><a (click)="login=false" style="color: #318CE7;text-decoration: none; ">Forget
+                                        Password?</a>
+                                </div>
                             </div>
 
                             <div class="mt-5 text-center">
                                 <!-- <button type="submit"
                                         class="btn btn-dark w-100 font-weight-bold mt-2">Submit</button> -->
-                                <button routerLink="/Meterbox" type="button" class="btn btn-secondary btn-lg">Submit</button>
+                                <button routerLink="/Meterbox" type="button"
+                                    class="btn btn-secondary btn-lg">Submit</button>
                                 <!-- <button type="button" class="btn btn-primary">Submit</button> -->
                             </div>
                         </form>
@@ -66,12 +72,50 @@
                                 Get Members Benefit. <a href="#">Sign Up</a>
                             </div> -->
                     </div>
+                    }
+                    @else if(!login && !resetsubmit) {
+                    <p class="pb-3 text-start font-weight-bold" style="font-size: 20px;">Reset your password</p>
+
+                    <div class="form-style">
+                        <form>
+                            <div class="form-group mt-4 pb-3">
+                                <input type="email" placeholder="Employee code or email address" class="form-control"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="mt-5 text-start">
+                                <button type="button" (click)="resetsubmit=true"
+                                    class="btn btn-secondary btn-lg">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    }
+                    @else{
+                    <p class="pb-3 text-start font-weight-bold" style="font-size: 20px;">Email sent</p>
+                    <div class="mt-5 text-start">
+                        <p style="font-size: 20px;">Please click on the link in the email to
+                            reset your password.</p>
+                    </div>
+
+                    <div><a (click)="resetsubmit=!login=true" style="color: #318CE7;text-decoration: none; ">Go to Login
+                            page</a>
+                    </div>
+                    }
+
                 </div>
             </div>
+
             <div class="col-md-6 d-none d-md-block ">
-                <img src="../../../../assets/images/logos/growth.png" 
-                class="img-fluid" style="width: 1064px; height: 533px; " />
+                <img src="../../../../assets/images/logos/growth.png" class="img-fluid"
+                    style="width: 1064px; height: 533px; " />
             </div>
+            }
+            @else {
+            <div class="col-md-12 mt-3" style="border-top: 2px solid #FBE2E2;">
+                <app-reset-password></app-reset-password>
+            </div>
+        }
         </div>
 
     </div>
