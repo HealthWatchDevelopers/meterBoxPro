@@ -19,18 +19,25 @@
     <!-- End Search Bar -->
 
     <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" routerLink="/Meterbox" >Dashboard</a>
+      
+      @for (item of headerNavData; track $index) {
+      <li class="nav-item" (click)="navigateDate(item.title)">
+        <a class="" [ngClass]="item.active? 'nav-link active':'nav-link'" [id]="item.title"
+         [routerLink]="item.routerPath" >{{item.title}}</a>
       </li>
-      <li class="nav-item">
+    }
+
+      <!-- <li class="nav-item">
         <a class="nav-link" >My Roster</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" >My Attendance</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link">My Leave</a>
-      </li>
+      </li> -->
     </ul>
 
     
