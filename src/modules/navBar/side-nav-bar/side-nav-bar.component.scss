@@ -6,13 +6,13 @@
 
 .sidebar {
     position: fixed;
-    top: 60px;
+    top: 5rem;
     left: 0;
     bottom: 0;
-    width: 5rem;
+    width: 6rem;
     z-index: 996;
     transition: all 0.3s;
-    padding: 20px;
+    padding: 9px;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #aab7cf transparent;
@@ -61,6 +61,8 @@
     list-style: none;
   }
   
+
+  
   .sidebar-nav li {
     padding: 0;
     margin: 0;
@@ -82,19 +84,20 @@
   .sidebar-nav .nav-link {
     display: flex;
     align-items: center;
-    font-size: 15px;
-    font-weight: 600;
-    color: #4154f1;
+    font-size: 13px;
+    // font-weight: 600;
+    color: #092041;
     transition: 0.3;
-    background: #f6f9ff;
-    padding: 10px 15px;
+    
+    padding: 8px 5px;
     border-radius: 4px;
+    text-align: center
   }
   
   .sidebar-nav .nav-link i {
-    font-size: 16px;
-    margin-right: 10px;
-    color: #4154f1;
+    font-size: 30px;
+    // margin-right: 10px;
+    color: #318CE7;
   }
   
   .sidebar-nav .nav-link.collapsed {
@@ -161,6 +164,8 @@
 .sidenav-collapsed{ 
   width: 16.5625rem;   
 }
+
+
 
 // .icon-100 { font-size: 40px; }
 // .icon-200 { font-size: 200px; }

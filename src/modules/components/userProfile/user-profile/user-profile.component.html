@@ -275,36 +275,38 @@
 
                         </div>
                         }
-                        @else {                            
+                        @else {
 
-                            <div class="row folder-row">   
+                        <div class="row folder-row">
 
-                                <div class="col-sm-10"><h5>Onboarding documents</h5></div>
-                                <div class="col-sm-2 mt-1 text-center">
-                                    <p><a class="link-underline link-underline-opacity-0" href="#">
-                                            <i class="bi bi-chevron-left"></i>Back</a></p>
-                
-                                </div>
-                                
-                                @for (item of documentdetails; track $index) {
-                                <div class="col-sm-4 mb-3 info-label"><img class="onboard-doc-img"
-                                        src="../../../../assets/images/icons/icons8-pdf-100.png" />
-                                    <div class="row folder-doc-text-bold">{{item.fileName}}</div>
-    
-                                    <div class="row folder-doc-text-small">collected : {{item.collectedDate}}</div>
-                                    <div class="row folder-doc-text-small">Size : {{item.fileSize}}</div>
-                                    <div class="row folder-doc-download"><a><span>Download &nbsp;<i
-                                                    class="ri-download-2-fill"></i></span></a></div>
-                                </div>
-                                }
-    
-    
+                            <div class="col-sm-10">
+                                <h5>Onboarding documents</h5>
                             </div>
+                            <div class="col-sm-2 mt-1 text-center">
+                                <p><a class="link-underline link-underline-opacity-0" (click)="Onboardingdocuments = !Onboardingdocuments">
+                                        <i class="bi bi-chevron-left"></i>Back</a></p>
+
+                            </div>
+
+                            @for (item of documentdetails; track $index) {
+                            <div class="col-sm-4 mb-3 info-label"><img class="onboard-doc-img"
+                                    src="../../../../assets/images/icons/icons8-pdf-100.png" />
+                                <div class="row folder-doc-text-bold">{{item.fileName}}</div>
+
+                                <div class="row folder-doc-text-small">collected : {{item.collectedDate}}</div>
+                                <div class="row folder-doc-text-small">Size : {{item.fileSize}}</div>
+                                <div class="row folder-doc-download"><a><span>Download &nbsp;<i
+                                                class="ri-download-2-fill"></i></span></a></div>
+                            </div>
+                            }
+
+
+                        </div>
                         }
 
                     </div>
 
-                    
+
 
                 </div>
 
